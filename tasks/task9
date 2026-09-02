@@ -108,6 +108,20 @@ def main():
         fig.draw()
     
     print("\n" + "=" * 60)
+
+    print("\n4. ВЫЧИСЛЕНИЕ ОБЩЕЙ ПЛОЩАДИ ВСЕХ ФИГУР")
+    print("=" * 40)
+    
+    total_area = 0
+    print("Площади фигур:")
+    for i, fig in enumerate(figures, 1):
+        area = fig.calculate_area()
+        total_area += area
+    print(f"Фигура {i} ({fig.__class__.__name__}): {area:.2f}")
+    
+    print(f"ОБЩАЯ ПЛОЩАДЬ ВСЕХ ФИГУР: {total_area:.2f}")
+    
+    print("\n" + "=" * 60)
     
     print("\n5. ДОПОЛНИТЕЛЬНЫЕ ВОЗМОЖНОСТИ")
     print("=" * 40)
